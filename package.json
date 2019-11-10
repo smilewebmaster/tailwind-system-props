@@ -1,0 +1,14 @@
+{
+  "name": "tailwind-system-props",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/my-slab/tailwind-system-props.git",
+  "author": "Mitchell Stewart <mitchell.stewart@mylsb.email>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
