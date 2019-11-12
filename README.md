@@ -5,11 +5,11 @@ Apply tailwind utility classes using [Styled System](https://styled-system.com/)
 ## Example
 
 ```
-<Box p="xl" bg="peachpuff" />
+<Box p={["md", "xl"]} bg="peachpuff" />
 ```
 
 is equivalent to 
 
 ```
-<Box classNames="p-xl bg-peachpuff" />
+<Box classNames="sm:p-md md:p-xl bg-peachpuff" />
 ```
