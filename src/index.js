@@ -48,6 +48,22 @@ const colorFns = {
   bg: toClasses('bg', 'bg')
 }
 
+const flexFns = {
+  // flexBasis:
+  // flexGrow:
+  // flexShrink:
+  // justifyItems: toClasses('')
+  // justifySelf:
+  alignContent: toClasses('content', 'alignContent'),
+  alignItems: toClasses('items', 'alignItems'),
+  alignSelf: toClasses('self', 'alignSelf'),
+  flex: toClasses('flex', 'flex'),
+  flexDirection: toClasses('flex', 'flexDirection'),
+  flexWrap: toClasses('flex', 'flexWrap'),
+  justifyContent: toClasses('justify', 'justifyContent'),
+  order: toClasses('order', 'order')
+}
+
 const layoutFns = {
   width: toClasses('w', 'width'),
   height: toClasses('h', 'height'),
@@ -93,7 +109,8 @@ const typographyFns = {
 module.exports = {
   color: applyPropFns(colorFns),
   compose,
-  layoutFns: applyPropFns(layoutFns),
+  flex: applyPropFns(flexFns),
+  layout: applyPropFns(layoutFns),
   space: applyPropFns(spaceFns),
   toClasses,
   typography: applyPropFns(typographyFns)
