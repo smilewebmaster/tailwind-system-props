@@ -6,13 +6,33 @@
   "author": "Mitchell Stewart <mitchell.stewart@mylsb.email>",
   "license": "MIT",
   "scripts": {
+    "build": "pika build",
     "test": "jest"
   },
   "devDependencies": {
+    "@pika/pack": "^0.5.0",
+    "@pika/plugin-build-node": "^0.7.1",
+    "@pika/plugin-build-web": "^0.7.1",
+    "@pika/plugin-standard-pkg": "^0.7.1",
     "jest": "^24.9.0"
   },
   "peerDependencies": {
     "react": "^16.12.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "@pika/pack": {
+    "pipeline": [
+      [
+        "@pika/plugin-standard-pkg",
+        {
+          "exclude": [
+            "src/__tests__/**/*"
+          ]
+        }
+      ],
+      [
+        "@pika/plugin-build-web"
+      ]
+    ]
+  }
 }
