@@ -1,7 +1,9 @@
 {
   "name": "tailwind-system-props",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.0.0-beta.1",
+  "esnext": "pkg/dist-src/index.js",
+  "main": "pkg/dist-web/index.js",
+  "module": "pkg/dist-web/index.js",
   "repository": "https://github.com/my-slab/tailwind-system-props.git",
   "author": "Mitchell Stewart <mitchell.stewart@mylsb.email>",
   "license": "MIT",
