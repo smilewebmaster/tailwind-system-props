@@ -33,10 +33,11 @@ import { color, compose, layout, size, space } from 'tailwind-system-props'
 Create a `Box`
 
 ```jsx
+import React from 'react'
 import { color, compose, space } from 'tailwind-system-props'
 
-function Box(props) {
-  return <div {...props} />
+function Box({ as = 'div', ...props }) {
+  return React.createElement(as, props)
 }
 
 export default compose(color, space)(Box)
