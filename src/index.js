@@ -27,7 +27,7 @@ function toClasses(tailwindKey, systemProp) {
 
     if (prop) {
       if (Array.isArray(prop)) {
-        const responsives = ['sm:', 'md:', 'lg:', 'xl:']
+        const responsives = ['', 'sm:', 'md:', 'lg:', 'xl:']
 
         return prop
           .map((value, i) =>
