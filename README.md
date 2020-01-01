@@ -13,13 +13,13 @@ Add props to your React components to help you quickly build UIs.
 In Tailwind, utility classes can be applied conditionally at different breakpoints. We can use props that accept arrays as values for mobile-first responsive styles.
 
 ```jsx
-<Box fontSizes={['sm', 'md']} bg={['green', 'purple']} />
+<Box fontSizes={['sm', 'md']} bg={['green', 'purple', 'pink']} />
 ```
 
 will output something like
 
 ```html
-<div class="sm:text-sm md:text-md sm:bg-green md:bg-purple" />
+<div class="text-sm sm:text-md bg-green sm:bg-purple md:bg-pink" />
 ```
 
 ## API
