@@ -48,3 +48,50 @@ now, use the `Box`
 ```jsx
 <Box bg="green-400" p="md" m="sm" />
 ```
+
+### Advanced
+
+Let's say we want to change a button component's size based on conditional breakpoints.
+
+Start with a button component with size utilties wrapped in a `@responsive` directive. This directive allows you to use these styles conditionally at different breakpoints.
+
+```css
+.btn {
+  @apply bg-purple text-white px-md;
+}
+
+@responsive {
+  .btn-sm {
+    @apply py-sm;
+  }
+
+  .btn-md {
+    @apply py-md;
+  }
+
+  .btn-lg {
+    @apply py-lg;
+  }
+}
+```
+
+You can use `toTailwindClasses` to pass the Tailwind class name (e.g., `btn`) and value (or array of values for responsive classes) to create custom Tailwind classes.
+
+```jsx
+import React  from 'react'
+import { toTailwindClasses } from 'tailwind-system-props'
+
+function Button({ size, ...props }) {
+  const fromSize = toTailwindClasses('btn', size)
+  return <button className={`btn ${fromSize}`} {...props}>
+}
+
+// Usage
+<Button size={['md', 'lg']}>Save</Button>
+```
+
+will output something like
+
+```html
+<button class="btn btn-md sm:btn-lg">Save</button>
+```
